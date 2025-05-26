@@ -1,29 +1,73 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import AnimatedSplashScreen from "@/components/AnimatedSplashScreen";
+import { ClerkProvider } from "@clerk/clerk-expo";
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
+import { useCallback, useEffect, useState } from "react";
+import { View } from "react-native";
+import "../globals.css";
+import { tokenCache } from '@clerk/clerk-expo/token-cache'
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+// Keep the splash screen visible while we fetch resources
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+  const [isSplashVisible, setIsSplashVisible] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsSplashVisible(false);
+    }, 3000);
+  }, []);
+
+  const [fontsLoaded, fontError] = useFonts({
+    "EudoxusSans-Regular": require("../assets/fonts/Eudoxus-Sans-font/EudoxusSans-Regular.ttf"),
+    "EudoxusSans-Medium": require("../assets/fonts/Eudoxus-Sans-font/EudoxusSans-Medium.ttf"),
+    "EudoxusSans-ExtraLight": require("../assets/fonts/Eudoxus-Sans-font/EudoxusSans-ExtraLight.ttf"),
+    "EudoxusSans-Light": require("../assets/fonts/Eudoxus-Sans-font/EudoxusSans-Light.ttf"),
+    "EudoxusSans-ExtraBold": require("../assets/fonts/Eudoxus-Sans-font/EudoxusSans-ExtraBold.ttf"),
+    "EudoxusSans-Bold": require("../assets/fonts/Eudoxus-Sans-font/EudoxusSans-Bold.ttf"),
   });
 
-  if (!loaded) {
-    // Async font loading only occurs in development.
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
+
+  useEffect(() => {
+    if (fontsLoaded || fontError) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
+  if (!fontsLoaded && !fontError) {
     return null;
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <ClerkProvider tokenCache={tokenCache}>
+      <View
+        className="bg-primary"
+        style={{ flex: 1 }}
+        onLayout={onLayoutRootView}
+      >
+        {isSplashVisible && <AnimatedSplashScreen />}
+        <StatusBar style="light" backgroundColor="transparent" />
+        <Stack>
+          <Stack.Screen
+            name="(auth)"
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Stack>
+      </View>
+    </ClerkProvider>
   );
 }

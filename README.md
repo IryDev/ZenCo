@@ -1,50 +1,120 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <br />
+    <a href="<div align="center">
+  <br />
+    <a href="https://elineneilz.framer.website/projets/zen-co-app" target="_blank">
+      <img src="https://github.com/user-attachments/assets/a0148c94-90ff-4606-b477-4337ae21ded2" alt="Project Banner">
+    </a>
+  
+  <br />
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<img src="https://skills-icons.vercel.app/api/icons?i=reactnative,expo,ts,tailwind,zustand" />
 
-## Get started
+  <h3 align="center">Zen'Co</h3>
 
-1. Install dependencies
+   <div align="center">
+         A mobile app to simplify co-living
+    </div>
+</div>
 
-   ```bash
-   npm install
-   ```
+## 📋 <a name="table">Table of Contents</a>
 
-2. Start the app
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🚀 [More](#more)
 
-   ```bash
-   npx expo start
-   ```
+## 🤖 <a name="introduction">Introduction</a>
 
-In the output, you'll find options to open the app in a
+**Zen'Co** is a mobile app designed to make shared living easier. Whether you're splitting chores, managing shared expenses, or sharing important info with your housemates — everything is organized in one smooth and user-friendly app.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+This project is based on a **UI design by [Eline Neilz](https://elineneilz.framer.website/projets/zen-co-app)**, and I asked her permission to turn it into a personal **side project** using React Native.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ⚙️ <a name="tech-stack">Tech Stack</a>
 
-## Get a fresh project
+**[React Native](https://reactnative.dev/)** is a JavaScript framework developed by Meta (Facebook) that allows you to build mobile applications using React. It enables developers to write cross-platform apps (iOS & Android) with a shared codebase, while still delivering a native look and feel.
 
-When you're ready, run:
+**[Expo](https://expo.dev/)** is an open-source platform built on top of React Native that simplifies the development workflow. It provides a set of tools and services (such as OTA updates, build systems, and device previews) that make building, testing, and deploying React Native apps faster and easier — especially for solo developers and small teams.
+
+**[Native Wind](https://www.nativewind.dev/)** brings Tailwind CSS to React Native. It allows developers to use utility-first styling in their mobile apps, which significantly improves development speed, readability, and consistency in UI design. Under the hood, it compiles Tailwind-like class names into performant stylesheets for native apps.
+
+**[TypeScript](https://www.typescriptlang.org/)** is a superset of JavaScript that adds static typing, providing better tooling, code quality, and error detection for developers, making it ideal for building large-scale applications.
+
+**[Zustand](https://zustand-demo.pmnd.rs/)** is a lightweight and flexible state management library for React. Unlike more complex tools like Redux, Zustand offers a simpler API and better performance, making it ideal for managing shared state in React Native apps without boilerplate.
+
+## 🔋 <a name="features">Features</a>
+
+👉 **Task Management** :
+
+👉 **Create a flatshare** :
+
+👉 **Handle shared Expenses** :
+
+👉 **App messaging between housemates** :
+
+👉 **Notifications, Reminders** :
+
+## ⚡ Quick Start
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [pnpm](https://pnpm.io/) (Performant Node Package Manager)
+
+**Cloning the Repository**
 
 ```bash
-npm run reset-project
+git clone https://github.com/IryDev/hogwarts-cards-collection.git
+
+cd hogwarts-cards-collection
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Installation
 
-## Learn more
+Install the project dependencies using pnpm:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+pnpm i
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**Set Up Environment Variables**
 
-## Join the community
+Create a new file named .env in the root of your project and add the following content:
 
-Join our community of developers creating universal apps.
+```
+NEXT_PUBLIC_ENDPOINT=
+PROJECT_ID=
+API_KEY=
+DATABASE_ID=
+PATIENT_COLLECTION_ID=
+APPOINTMENT_COLLECTION_ID=
+NEXT_PUBLIC_BUCKET_ID=
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the Appwrite website.
+
+Running the Project
+
+```bash
+pnpm run ios
+```
+
+Open your simulator to view the application.
+
+## <a name="more">🚀 More </a>
+
+**If you want to see more of my creations**
+
+Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
+
+<br />
+    <a href="https://rey-kosso.com/" target="_blank">
+      <img src="https://github.com/user-attachments/assets/e73daceb-27ac-49cd-ad81-c6ea53d53f15" alt="Project Footer">
+    </a>
+<br />
