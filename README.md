@@ -2,7 +2,11 @@
   <br />
     <a href="<div align="center">
   <br />
+<<<<<<< HEAD
     <a href="https://elineneilz.framer.website/projets/zen-co-app" target="_blank">
+=======
+    <a href="https://hogwarts-cards-collection.vercel.app/" target="_blank">
+>>>>>>> c73a9d8ca3154b5e06a0ba21aeea4de2e3b44a25
       <img src="https://github.com/user-attachments/assets/a0148c94-90ff-4606-b477-4337ae21ded2" alt="Project Banner">
     </a>
   
@@ -45,6 +49,7 @@ This project is based on a **UI design by [Eline Neilz](https://elineneilz.frame
 
 ## 🔋 <a name="features">Features</a>
 
+<<<<<<< HEAD
 👉 **Task Management** :
 
 👉 **Create a flatshare** :
@@ -54,6 +59,17 @@ This project is based on a **UI design by [Eline Neilz](https://elineneilz.frame
 👉 **App messaging between housemates** :
 
 👉 **Notifications, Reminders** :
+=======
+👉 **Task Management** : 
+
+👉 **Create a flatshare** : 
+
+👉 **Handle shared Expenses** : 
+
+👉 **App messaging between housemates** : 
+
+👉 **Notifications, Reminders** : 
+>>>>>>> c73a9d8ca3154b5e06a0ba21aeea4de2e3b44a25
 
 ## ⚡ Quick Start
 
@@ -108,7 +124,10 @@ pnpm run ios
 Open your simulator to view the application.
 
 ## <a name="more">🚀 More </a>
+<<<<<<< HEAD
 
+=======
+>>>>>>> c73a9d8ca3154b5e06a0ba21aeea4de2e3b44a25
 **If you want to see more of my creations**
 
 Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
